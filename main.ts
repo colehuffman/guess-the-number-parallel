@@ -8,13 +8,7 @@ input.onButtonPressed(Button.AB, function () {
     // if the guessed number is below the secret number the word "add' is displayed
     // if the guessed number is above the secret number the word "subtract' is displayed
     if (guess == secretnumber) {
-        basic.showLeds(`
-            . . . . #
-            . . . # .
-            # . # . .
-            . # . . .
-            . . . . .
-            `)
+        basic.showIcon(IconNames.Yes)
         basic.pause(1000)
         // resets the entire program when the secret number is guessed
         control.reset()
@@ -31,7 +25,7 @@ input.onButtonPressed(Button.B, function () {
 })
 let guess = 0
 let secretnumber = 0
-// sets the secret number to a random number between 0 and 25
+// sets the secret number to pick a random number between 0 and 25
 secretnumber = randint(0, 25)
-// stops guessed number from passing 0 or 20
+// stops guessed number from passing 0 or 25
 guess = Math.constrain(guess, 0, 25)
