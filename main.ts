@@ -10,6 +10,8 @@ input.onButtonPressed(Button.AB, function () {
     // if the guessed number is less than the secret number the word "add' is displayed
     // if the guessed number is greater than the secret number the word "subtract' is displayed
     if (number == secretnumber) {
+        // plays music as a reward for guessing the correct number
+        music.playMelody("C D E F G A B C5 ", 500)
         // displays a check
         basic.showIcon(IconNames.Yes)
         // pauses for 1 second so the viewer can see the check
